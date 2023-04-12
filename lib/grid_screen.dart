@@ -158,7 +158,7 @@ class _GridScreenState extends State<GridScreen> {
       return true;
     }
 
-    // check if i, j is within the grid and not visited
+  
     if (i < 0 ||
         j < 0 ||
         i >= widget.rows ||
@@ -167,15 +167,15 @@ class _GridScreenState extends State<GridScreen> {
       return false;
     }
 
-    // check if the current letter matches the next letter of the word
+    
     if (grid[i][j] != word[0]) {
       return false;
     }
 
-    // mark the current cell as visited
+   
     visited[i][j] = true;
 
-    // check all adjacent cells in all directions
+   
     bool found = false;
     found = findWord(word.substring(1), i - 1, j) ||
         findWord(word.substring(1), i + 1, j) ||
